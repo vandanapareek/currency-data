@@ -9,7 +9,7 @@
 export default {
     data(){
         return {
-            date:'',
+            date:new Date().toISOString().substring(0, 10),
             invalidDate:false,
             maxDate:null
         }
@@ -27,7 +27,7 @@ export default {
             }
             this.invalidDate = false;
             this.$emit("selected-date",this.date);
-        }
+        },
     }
 }
 </script>
