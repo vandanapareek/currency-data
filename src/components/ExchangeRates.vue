@@ -57,13 +57,7 @@ export default{
                 const resp  = await axios.get(url,{
                     params
                 });
-//                 const resp = {
-//     "success": false,
-//     "error": {
-//         "code": 302,
-//         "info": "You have entered an invalid date. [Required format: date=YYYY-MM-DD]"
-//     }
-// }
+
                 if(!resp.data.success) {
                     this.isApiError = resp.data.error.info;
                 } else {
