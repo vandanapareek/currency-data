@@ -1,7 +1,10 @@
 # Exchange Rates
 
 This simple web application displays the latest and historical exchange rates using the Currency Data API from APILayer.
- 
+
+## Working Demo
+See [Working Demo](http://vuejs-vite-s3-bucket.s3-website-ap-southeast-1.amazonaws.com/)
+
 ## Quickstart
 
 ### Deploy using Docker
