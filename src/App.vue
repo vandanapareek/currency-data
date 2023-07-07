@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HeaderComp/>
+  <div class="container">
+    <div class="container-filter">
+      <date-picker @selected-date="onDateSelection"></date-picker>
+    </div>
+    <exchange-rates :selected-date="selectedDate"></exchange-rates>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComp from './components/HeaderComp.vue'
+import DatePicker from './components/DatePicker.vue'
+import ExchangeRates from './components/ExchangeRates.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeaderComp,
+    DatePicker,
+    ExchangeRates
+  },
+  data() {
+    return {
+      selectedDate:''
+    }
+  },
+  methods: {
+    onDateSelection(date) {
+      this.selectedDate = date;
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import "@/styles/Common.scss";
 </style>

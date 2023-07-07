@@ -1,0 +1,24 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  .container-filter{
+    max-width: 90%;
+      width: 100%;
+      margin: 0 auto;
+      padding: 5px;
+      text-align: right;
+      padding-bottom: 0;
+  }
